@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Centro de ayuda de una tienda online basica."
+    />
+    <title>Centro de ayuda - TechStore</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">TechStore</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menuPrincipal"
+          aria-controls="menuPrincipal"
+          aria-expanded="false"
+          aria-label="Abrir menu de navegacion"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="ayuda.html">
+                Ayuda
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="bg-light py-5">
+        <div class="container">
+          <h1 class="display-6 fw-bold">Centro de ayuda</h1>
+          <p class="lead mb-0">
+            En esta pagina encontraras respuestas basicas para aprender como
+            funcionaria la ayuda de una tienda online.
+          </p>
+        </div>
+      </section>
+
+      <section class="py-5">
+        <div class="container">
+          <h2 class="h3 mb-4">Preguntas frecuentes</h2>
+
+          <div class="accordion" id="preguntasFrecuentes">
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#preguntaUno"
+                  aria-expanded="true"
+                  aria-controls="preguntaUno"
+                >
+                  Como comprar en la tienda?
+                </button>
+              </h3>
+              <div
+                id="preguntaUno"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#preguntasFrecuentes"
+              >
+                <div class="accordion-body">
+                  Primero revisa la informacion del producto, luego agregalo al
+                  carrito y finalmente confirma tus datos de compra. Esta
+                  funcion se puede construir mas adelante en el proyecto.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#preguntaDos"
+                  aria-expanded="false"
+                  aria-controls="preguntaDos"
+                >
+                  Que metodos de pago se aceptan?
+                </button>
+              </h3>
+              <div
+                id="preguntaDos"
+                class="accordion-collapse collapse"
+                data-bs-parent="#preguntasFrecuentes"
+              >
+                <div class="accordion-body">
+                  En una tienda real se podrian aceptar pagos con tarjeta,
+                  transferencia o pago contra entrega. Por ahora esta pagina es
+                  una maqueta educativa.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#preguntaTres"
+                  aria-expanded="false"
+                  aria-controls="preguntaTres"
+                >
+                  Cuanto tarda el envio?
+                </button>
+              </h3>
+              <div
+                id="preguntaTres"
+                class="accordion-collapse collapse"
+                data-bs-parent="#preguntasFrecuentes"
+              >
+                <div class="accordion-body">
+                  El tiempo de envio depende de la ciudad y del servicio de
+                  transporte. Como ejemplo, podria tardar entre 2 y 5 dias
+                  habiles.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#preguntaCuatro"
+                  aria-expanded="false"
+                  aria-controls="preguntaCuatro"
+                >
+                  Como contactar soporte?
+                </button>
+              </h3>
+              <div
+                id="preguntaCuatro"
+                class="accordion-collapse collapse"
+                data-bs-parent="#preguntasFrecuentes"
+              >
+                <div class="accordion-body">
+                  Puedes ir a la pagina de contacto y enviar tus datos para que
+                  el equipo de soporte revise tu solicitud.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pb-5">
+        <div class="container">
+          <h2 class="h3 mb-3">Recomendaciones</h2>
+          <ul class="list-group">
+            <li class="list-group-item">
+              Revisa la informacion del producto antes de comprar.
+            </li>
+            <li class="list-group-item">
+              Verifica que tus datos de contacto esten completos.
+            </li>
+            <li class="list-group-item">
+              Guarda el numero de pedido para consultar el estado de tu compra.
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+      <div class="container">
+        <p class="mb-0">TechStore - Centro de ayuda 2026</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
