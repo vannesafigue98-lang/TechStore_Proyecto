@@ -55,6 +55,112 @@ app.post("/guardar", (req, res) => {
     });
 });
 
+// Validar datos obligatorios de productos
+function validarProducto(producto) {
+    const { nombre, descripcion, precio, categoria, stock, imagen } = producto;
+
+    if (!nombre || !descripcion || precio === undefined || !categoria || stock === undefined || !imagen) {
+        return "Todos los campos del producto son obligatorios";
+    }
+
+    if (nombre.trim() === "" || descripcion.trim() === "" || categoria.trim() === "" || imagen.trim() === "") {
+        return "Los campos de texto no pueden estar vacios";
+    }
+
+    if (isNaN(precio) || Number(precio) < 0) {
+        return "El precio debe ser un numero valido";
+    }
+
+    if (isNaN(stock) || Number(stock) < 0) {
+        return "El stock debe ser un numero valido";
+    }
+
+    return null;
+}
+
+// Listar productos
+app.get("/productos", (req, res) => {
+    const sql = "SELECT * FROM productos";
+
+    db.query(sql, (err, results) => {
+        if (err) {
+            console.error("Error SQL:", err);
+            return res.status(500).send("Error en servidor");
+        }
+
+        res.json(results);
+    });
+});
+
+// Registrar producto
+app.post("/productos", (req, res) => {
+    const errorValidacion = validarProducto(req.body);
+
+    if (errorValidacion) {
+        return res.status(400).send(errorValidacion);
+    }
+
+    const { nombre, descripcion, precio, categoria, stock, imagen } = req.body;
+    const sql = "INSERT INTO productos (nombre, descripcion, precio, categoria, stock, imagen) VALUES (?, ?, ?, ?, ?, ?)";
+
+    db.query(sql, [nombre, descripcion, precio, categoria, stock, imagen], (err, result) => {
+        if (err) {
+            console.error("Error SQL:", err);
+            return res.status(500).send("Error en servidor");
+        }
+
+        res.status(201).json({
+            mensaje: "Producto registrado correctamente",
+            id: result.insertId
+        });
+    });
+});
+
+// Actualizar producto
+app.put("/productos/:id", (req, res) => {
+    const { id } = req.params;
+    const errorValidacion = validarProducto(req.body);
+
+    if (errorValidacion) {
+        return res.status(400).send(errorValidacion);
+    }
+
+    const { nombre, descripcion, precio, categoria, stock, imagen } = req.body;
+    const sql = "UPDATE productos SET nombre = ?, descripcion = ?, precio = ?, categoria = ?, stock = ?, imagen = ? WHERE id = ?";
+
+    db.query(sql, [nombre, descripcion, precio, categoria, stock, imagen, id], (err, result) => {
+        if (err) {
+            console.error("Error SQL:", err);
+            return res.status(500).send("Error en servidor");
+        }
+
+        if (result.affectedRows === 0) {
+            return res.status(404).send("Producto no encontrado");
+        }
+
+        res.send("Producto actualizado correctamente");
+    });
+});
+
+// Eliminar producto
+app.delete("/productos/:id", (req, res) => {
+    const { id } = req.params;
+    const sql = "DELETE FROM productos WHERE id = ?";
+
+    db.query(sql, [id], (err, result) => {
+        if (err) {
+            console.error("Error SQL:", err);
+            return res.status(500).send("Error en servidor");
+        }
+
+        if (result.affectedRows === 0) {
+            return res.status(404).send("Producto no encontrado");
+        }
+
+        res.send("Producto eliminado correctamente");
+    });
+});
+
 
 // Iniciar servidor
 app.listen(3000, () => {
