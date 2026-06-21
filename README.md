@@ -1,4 +1,4 @@
-🛒 TechStore Gamer – Tienda Virtual Personalizada
+TechStore Gamer – Tienda Virtual Personalizada
 1. Nombre de la tienda virtual
 
 TechStore Gamer
@@ -45,8 +45,9 @@ TechStore/
 Clonar el repositorio desde GitHub:
 
 git clone <URL-del-repositorio>
+
 Abrir la carpeta del proyecto en Visual Studio Code.
-Instalar la extensión Live Server (si no la tienes).
+Instalar la extensión Live Server.
 Ejecutar el archivo index.html con Live Server.
 Navegar por el sitio web.
 
@@ -63,7 +64,7 @@ El usuario ingresa a la página principal.
 Navega a la sección de productos.
 Visualiza información de cada producto.
 Puede enviar mensajes mediante el formulario de contacto.
-Los datos del formulario se procesan con JavaScript (y backend si aplica en tu proyecto).
+Los datos del formulario se procesan con JavaScript.
 
 10. Pruebas realizadas
 Pruebas de navegación entre páginas
