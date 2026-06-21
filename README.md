@@ -8,7 +8,7 @@ Vannesa Velásquez Ramos
 
 4. Descripción de la tienda
 
-TechStore es una tienda virtual enfocada en la venta de productos tecnológicos como audífonos, dispositivos electrónicos y accesorios. El sitio permite visualizar productos, navegar entre páginas y simular una experiencia básica de compra.
+TechStore Gamer es una tienda virtual enfocada en la venta de productos tecnológicos enfocada en el ambito Gamer como audífonos, dispositivos electrónicos y accesorios. El sitio permite visualizar productos, navegar entre páginas y simular una experiencia básica de compra.
 
 4. Objetivo del proyecto
 
