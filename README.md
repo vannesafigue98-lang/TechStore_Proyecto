@@ -6,7 +6,7 @@ TechStore Gamer
 2. Integrantes del grupo
 Vannesa Velásquez Ramos
 
-3. Descripción de la tienda
+4. Descripción de la tienda
 
 TechStore es una tienda virtual enfocada en la venta de productos tecnológicos como audífonos, dispositivos electrónicos y accesorios. El sitio permite visualizar productos, navegar entre páginas y simular una experiencia básica de compra.
 
