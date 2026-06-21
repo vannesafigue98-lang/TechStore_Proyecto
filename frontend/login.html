@@ -12,13 +12,20 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <link rel="stylesheet" href="css/estilos.css" />
   </head>
 
-  <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+  <body class="gamer-page inner-page">
+    <nav class="navbar navbar-expand-lg navbar-dark gamer-navbar">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html">TechStore</a>
+        <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+          <i class="bi bi-controller"></i>
+          TechStore Gamer
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -32,7 +39,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="menuPrincipal">
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
             <li class="nav-item">
               <a class="nav-link" href="index.html">Inicio</a>
             </li>
@@ -50,9 +57,10 @@
                 Login
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="admin-productos.html">
-                Administrar productos
+            <li class="nav-item ms-lg-2">
+              <a class="btn btn-neon btn-sm" href="admin-productos.html">
+                <i class="bi bi-sliders"></i>
+                Admin
               </a>
             </li>
           </ul>
@@ -61,8 +69,12 @@
     </nav>
 
     <main>
-      <section class="bg-light py-5">
+      <section class="page-hero">
         <div class="container text-center">
+          <span class="section-kicker justify-content-center">
+            <i class="bi bi-shield-lock"></i>
+            Panel seguro
+          </span>
           <h1 class="display-5 fw-bold">Ingreso administrativo</h1>
           <p class="lead mb-0">
             Accede con tu correo y contrasena para administrar la tienda online.
@@ -70,13 +82,16 @@
         </div>
       </section>
 
-      <section class="py-5">
+      <section class="support-section py-5">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-md-8 col-lg-5">
-              <div class="card">
+              <div class="card gamer-card">
                 <div class="card-body">
-                  <h2 class="h4 mb-3">Datos de acceso</h2>
+                  <h2 class="h4 mb-3">
+                    <i class="bi bi-person-lock text-info"></i>
+                    Datos de acceso
+                  </h2>
                   <p class="text-muted">
                     Este formulario permite validar el ingreso del administrador
                     antes de consultar o modificar la informacion de productos.
@@ -111,7 +126,8 @@
                       />
                     </div>
 
-                    <button type="submit" class="btn btn-primary w-100">
+                    <button type="submit" class="btn btn-neon w-100">
+                      <i class="bi bi-box-arrow-in-right"></i>
                       Ingresar
                     </button>
                   </form>
@@ -131,9 +147,9 @@
       </section>
     </main>
 
-    <footer class="bg-dark text-white text-center py-3">
+    <footer class="gamer-footer text-center py-4">
       <div class="container">
-        <p class="mb-0">TechStore - Proyecto educativo SENA 2026</p>
+        <p class="mb-0">TechStore Gamer - Proyecto educativo SENA 2026</p>
       </div>
     </footer>
 

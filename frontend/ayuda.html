@@ -12,13 +12,20 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <link rel="stylesheet" href="css/estilos.css" />
   </head>
 
-  <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+  <body class="gamer-page inner-page">
+    <nav class="navbar navbar-expand-lg navbar-dark gamer-navbar">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html">TechStore</a>
+        <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+          <i class="bi bi-controller"></i>
+          TechStore Gamer
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -32,7 +39,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="menuPrincipal">
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
             <li class="nav-item">
               <a class="nav-link" href="index.html">Inicio</a>
             </li>
@@ -50,9 +57,10 @@
             <li class="nav-item">
               <a class="nav-link" href="login.html">Login</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="admin-productos.html">
-                Administrar productos
+            <li class="nav-item ms-lg-2">
+              <a class="btn btn-neon btn-sm" href="admin-productos.html">
+                <i class="bi bi-sliders"></i>
+                Admin
               </a>
             </li>
           </ul>
@@ -61,21 +69,28 @@
     </nav>
 
     <main>
-      <section class="bg-light py-5">
+      <section class="page-hero">
         <div class="container">
-          <h1 class="display-6 fw-bold">Centro de ayuda</h1>
+          <span class="section-kicker">
+            <i class="bi bi-life-preserver"></i>
+            Soporte TechStore
+          </span>
+          <h1 class="display-6 fw-bold">Centro de ayuda gamer</h1>
           <p class="lead mb-0">
-            En esta pagina encontraras respuestas basicas para aprender como
-            funcionaria la ayuda de una tienda online.
+            Resuelve dudas sobre compras, pagos, envios y soporte para tu
+            proximo upgrade.
           </p>
         </div>
       </section>
 
-      <section class="py-5">
+      <section class="support-section py-5">
         <div class="container">
-          <h2 class="h3 mb-4">Preguntas frecuentes</h2>
+          <h2 class="h3 mb-4">
+            <i class="bi bi-question-circle text-info"></i>
+            Preguntas frecuentes
+          </h2>
 
-          <div class="accordion" id="preguntasFrecuentes">
+          <div class="accordion gamer-accordion" id="preguntasFrecuentes">
             <div class="accordion-item">
               <h3 class="accordion-header">
                 <button
@@ -182,17 +197,23 @@
         </div>
       </section>
 
-      <section class="pb-5">
+      <section class="support-section pb-5">
         <div class="container">
-          <h2 class="h3 mb-3">Recomendaciones</h2>
-          <ul class="list-group">
+          <h2 class="h3 mb-3">
+            <i class="bi bi-stars text-warning"></i>
+            Recomendaciones
+          </h2>
+          <ul class="list-group gamer-list">
             <li class="list-group-item">
+              <i class="bi bi-check2-circle"></i>
               Revisa la informacion del producto antes de comprar.
             </li>
             <li class="list-group-item">
+              <i class="bi bi-check2-circle"></i>
               Verifica que tus datos de contacto esten completos.
             </li>
             <li class="list-group-item">
+              <i class="bi bi-check2-circle"></i>
               Guarda el numero de pedido para consultar el estado de tu compra.
             </li>
           </ul>
@@ -200,9 +221,9 @@
       </section>
     </main>
 
-    <footer class="bg-dark text-white text-center py-3">
+    <footer class="gamer-footer text-center py-4">
       <div class="container">
-        <p class="mb-0">TechStore - Centro de ayuda 2026</p>
+        <p class="mb-0">TechStore Gamer - Centro de ayuda 2026</p>
       </div>
     </footer>
 

@@ -12,13 +12,20 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <link rel="stylesheet" href="css/estilos.css" />
   </head>
 
-  <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+  <body class="gamer-page inner-page">
+    <nav class="navbar navbar-expand-lg navbar-dark gamer-navbar">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html">TechStore</a>
+        <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+          <i class="bi bi-controller"></i>
+          TechStore Gamer
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -32,7 +39,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="menuPrincipal">
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
             <li class="nav-item">
               <a class="nav-link" href="index.html">Inicio</a>
             </li>
@@ -54,9 +61,10 @@
             <li class="nav-item">
               <a class="nav-link" href="login.html">Login</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="admin-productos.html">
-                Administrar productos
+            <li class="nav-item ms-lg-2">
+              <a class="btn btn-neon btn-sm" href="admin-productos.html">
+                <i class="bi bi-sliders"></i>
+                Admin
               </a>
             </li>
           </ul>
@@ -65,17 +73,21 @@
     </nav>
 
     <main>
-      <section class="bg-light py-5">
+      <section class="page-hero">
         <div class="container text-center">
-          <h1 class="display-5 fw-bold">Catalogo de productos</h1>
-          <p class="lead mb-0">
-            Explora algunos productos de ejemplo para practicar el diseno de una
-            tienda online con HTML, CSS y Bootstrap.
+          <span class="section-kicker justify-content-center">
+            <i class="bi bi-bag-check"></i>
+            Catalogo gamer
+          </span>
+          <h1 class="display-5 fw-bold">Productos para tu setup</h1>
+          <p class="lead mb-0 mx-auto">
+            Explora equipos, perifericos y accesorios con estilo gamer para
+            jugar, estudiar y crear contenido.
           </p>
         </div>
       </section>
 
-      <section class="py-5">
+      <section class="catalog-section py-5">
         <div class="container">
           <div class="row g-4" id="catalogoProductos">
             <div class="col-12">
@@ -86,9 +98,9 @@
       </section>
     </main>
 
-    <footer class="bg-dark text-white text-center py-3">
+    <footer class="gamer-footer text-center py-4">
       <div class="container">
-        <p class="mb-0">TechStore - Proyecto educativo SENA 2026</p>
+        <p class="mb-0">TechStore Gamer - Proyecto educativo SENA 2026</p>
       </div>
     </footer>
 
