@@ -55,6 +55,45 @@ app.post("/guardar", (req, res) => {
     });
 });
 
+// Ruta para validar ingreso administrativo
+app.post("/login", (req, res) => {
+    const { correo, password } = req.body;
+    const correoLimpio = correo ? correo.trim() : "";
+    const passwordLimpio = password ? password.trim() : "";
+
+    if (!correoLimpio || !passwordLimpio) {
+        return res.status(400).json({
+            ok: false,
+            mensaje: "El correo y la contrasena son obligatorios"
+        });
+    }
+
+    const sql = "SELECT id, nombre, correo, rol FROM usuarios WHERE correo = ? AND password = ? LIMIT 1";
+
+    db.query(sql, [correoLimpio, passwordLimpio], (err, results) => {
+        if (err) {
+            console.error("Error SQL:", err);
+            return res.status(500).json({
+                ok: false,
+                mensaje: "Error en el servidor"
+            });
+        }
+
+        if (results.length === 0) {
+            return res.status(401).json({
+                ok: false,
+                mensaje: "Credenciales incorrectas"
+            });
+        }
+
+        res.json({
+            ok: true,
+            mensaje: "Ingreso correcto",
+            usuario: results[0]
+        });
+    });
+});
+
 // Validar datos obligatorios de productos
 function validarProducto(producto) {
     const { nombre, descripcion, precio, categoria, stock, imagen } = producto;
